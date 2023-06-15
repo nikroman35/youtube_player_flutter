@@ -80,42 +80,18 @@ class _LiveBottomBarState extends State<LiveBottomBar> {
           const SizedBox(
             width: 14.0,
           ),
-          CurrentPosition(),
-          Expanded(
-            child: Padding(
-              child: Slider(
-                value: _currentSliderPosition,
-                onChanged: (value) {
-                  _controller.seekTo(
-                    Duration(
-                      milliseconds:
-                          (_controller.metadata.duration.inMilliseconds * value)
-                              .round(),
-                    ),
-                  );
-                },
-                activeColor: widget.liveUIColor,
-                inactiveColor: Colors.transparent,
-              ),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 8.0,
+          Material(
+            color: widget.liveUIColor,
+            child: const Text(
+              ' LIVE ',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12.0,
+                fontWeight: FontWeight.w300,
               ),
             ),
           ),
-          InkWell(
-            onTap: () => _controller.seekTo(_controller.metadata.duration),
-            child: Material(
-              color: widget.liveUIColor,
-              child: const Text(
-                ' LIVE ',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12.0,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
-            ),
-          ),
+          Spacer(),
           widget.showLiveFullscreenButton
               ? FullScreenButton(controller: _controller)
               : const SizedBox(width: 14.0),

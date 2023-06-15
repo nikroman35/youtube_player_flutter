@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isPlayerReady = false;
 
   final List<String> _ids = [
-    'nPt8bK2gbaU',
+    'jfKfPfyJRdk',
     'gQDByCdjUXw',
     'iLnmTe5Q2Qw',
     '_WoCV4c6XOE',
@@ -80,9 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
       flags: const YoutubePlayerFlags(
         mute: false,
         autoPlay: true,
-        disableDragSeek: false,
+        disableDragSeek: true,
         loop: false,
-        isLive: false,
+        isLive: true,
         forceHD: false,
         enableCaption: true,
       ),
