@@ -91,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _seekToController = TextEditingController();
     _videoMetaData = const YoutubeMetaData();
     _playerState = PlayerState.unknown;
+
   }
 
   void listener() {
@@ -100,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
         _videoMetaData = _controller.metadata;
       });
     }
+
   }
 
   @override

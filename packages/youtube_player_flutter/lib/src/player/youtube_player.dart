@@ -215,7 +215,7 @@ class _YoutubePlayerState extends State<YoutubePlayer> {
       _initialLoad = false;
       if (controller.flags.autoPlay) controller.play();
       if (controller.flags.mute) controller.mute();
-      widget.onReady?.call();
+      // widget.onReady?.call();
       if (controller.flags.controlsVisibleAtStart) {
         controller.updateValue(
           controller.value.copyWith(isControlsVisible: true),
